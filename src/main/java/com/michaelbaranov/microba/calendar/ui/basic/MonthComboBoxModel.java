@@ -82,6 +82,7 @@ class MonthComboBoxModel extends AbstractListModel implements
 
 	public Object getElementAt(int index) {
 		Calendar c = Calendar.getInstance(locale);
+		c.setTimeZone(zone);
 		c.setTime(calendar.getTime());
 
 		c.set(Calendar.MONTH, 0);
